@@ -2,7 +2,7 @@
 Clicker for https://t.me/claytoncoinbot
 
 More crypto themes and softs in telegram: [ApeCryptor](https://t.me/+_xCNXumUNWJkYjAy "ApeCryptor") 🦧
-Additional soft information: https://t.me/ApeCryptorSoft/101
+Additional soft information: https://t.me/ApeCryptorSoft/102
 
 ## Functionality
 | Functional                                                     | Supported |
