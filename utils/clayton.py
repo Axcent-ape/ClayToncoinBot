@@ -97,7 +97,7 @@ class ClayTon:
         return await resp.json()
 
     async def claim(self):
-        resp = await self.session.post('https://tonclayton.fun/api/user/claim')
+        resp = await self.session.post('https://tonclayton.fun/api/user/claim-cl')
         r = await resp.json()
         return r.get('claimed'), r.get('user')
 
@@ -209,4 +209,3 @@ class ClayTon:
         local_now = int((datetime.now(timezone.utc) + timedelta(seconds=tz_offset)).timestamp())
 
         return local_now
-#7
