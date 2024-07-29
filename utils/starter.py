@@ -42,9 +42,9 @@ async def start(thread: int, session_name: str, phone_number: str, proxy: [str, 
             start_time = user['user']['start_time']
 
             if clay.iso_to_unix_time(start_time)+21600 < clay.current_time(start_time) and user['user']['active_farm']:
-                claimed, u = await clay.claim()
+                claimed, balance = await clay.claim()
                 if claimed:
-                    logger.success(f"Thread {thread} | {account} | Claimed {round(claimed, 2)} points; Balance: {u['tokens']}")
+                    logger.success(f"Thread {thread} | {account} | Claimed {round(claimed, 2)} points; Balance: {balance}")
 
             if clay.iso_to_unix_time(start_time)+21600 < clay.current_time(start_time) and not user['user']['active_farm']:
                 if await clay.start_farming():
