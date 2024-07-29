@@ -97,9 +97,9 @@ class ClayTon:
         return await resp.json()
 
     async def claim(self):
-        resp = await self.session.post('https://tonclayton.fun/api/user/claim-cl')
+        resp = await self.session.post('https://tonclayton.fun/api/user/claim')
         r = await resp.json()
-        return r.get('claimed'), r.get('user')
+        return r.get('claim'), r.get('tokens')
 
     async def end_play_512(self):
         resp = await self.session.post('https://tonclayton.fun/api/game/over')
